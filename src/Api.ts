@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export const Api= function() {
+export const Api = function () {
 }
 
 
-export function Post(fd:any)
-   {
-    
+export function Post(fd: any) {
+
+
     const data = new FormData();
-    
+
 
     for (let i = 0; i < fd.Variabellista.length; i++) {
-       data.append('Variabellista', fd.Variabellista[i]);
+        data.append('Variabellista', fd.Variabellista[i]);
     }
 
     for (let i = 0; i < fd.Komplettering_Fil.length; i++) {
         data.append('Komplettering_Fil', fd.Komplettering_Fil[i]);
-     }
+    }
+
     
-    //data.append('Bestallare_Namn', fd.Bestallare_Namn);
     data.append('Forskningshuvudman', fd.Forskningshuvudman);
     data.append('Bestallare_Namn', fd.Bestallare_Namn);
     data.append('Bestallare_Titel_och_Roll', fd.Bestallare_Titel_och_Roll);
@@ -39,7 +39,7 @@ export function Post(fd:any)
     data.append('Ansokan_Fil', fd.Ansokan_Fil);
     data.append('Beslut_Fil', fd.Beslut_Fil);
     data.append('Kompletta_handlingar_Fil', fd.Kompletta_handlingar_Fil);
-    // data.append('Komplettering_Fil', fd.Komplettering_Fil);
+    
     data.append('Projekttitel', fd.Projekttitel);
     data.append('Projektbeskrivning', fd.Projektbeskrivning);
     data.append('Projektbeskrivning_Fil', fd.Projektbeskrivning_Fil);
@@ -50,48 +50,41 @@ export function Post(fd:any)
     data.append('Lakemedelstudier', fd.Lakemedelstudier);
     data.append('Samarbete_Med_Industrin', fd.Samarbete_Med_Industrin);
     data.append('Avtal_Industri', fd.Avtal_Industri);
-    
+
     //data.append('Arra', fd.Arra);
     for (let i = 0; i < fd.Arra.length; i++) {
         data.append('Array', JSON.stringify(fd.Arra[i]));
-     }
- 
-    
-    
+    }
 
-    
-    //let bb = ft.get("hh");
-    const config = {     
+
+    const config = {
         headers: { 'content-type': 'multipart/form-data' }
     }
-    
-    
-    const url ="http://vgdb1572.vgregion.se:820/backend/VGR/PostRequest";
-    const url2 ="http://localhost:5196/vgr/PostRequest";
+
+
+    const url = "http://vgdb1572.vgregion.se:820/backend/VGR/PostRequest";
+    const url2 = "http://localhost:5196/vgr/PostRequest";
     axios.post(url2, data, config).then((res) => {
-    if(res.status===200)
-    alert("Ansökan är skickad");
-})
-
-
-   } 
+        if (res.status === 200)
+            alert("Ansökan är skickad");
+    })
+}
 
 
 
 
-export async function GetRegister(id:number)
-{
-    const url ="http://vgdb1572.vgregion.se:820/backend/VGR/GetRegister/"+id;
+export async function GetRegister(id: number) {
+    const url = "http://vgdb1572.vgregion.se:820/backend/VGR/GetRegister/" + id;
     const response = await axios.get(url);
-        
-        return response.data;
-    };
 
-    export async function GetGoverment() {
-        const url ="http://vgdb1572.vgregion.se:820/backend/VGR/GetGoverment";
+    return response.data;
+};
+
+export async function GetGoverment() {
+    const url = "http://vgdb1572.vgregion.se:820/backend/VGR/GetGoverment";
     const response = await axios.get(url);
-        
-        return response.data;
-    
-    };
+
+    return response.data;
+
+};
 
