@@ -40,6 +40,7 @@ const HandleException: Array1 = {
   ProjektbeskrivningControl: true,
   LakemedelstudierControl: true,
   Samarbete_Med_IndustrinControl: true,
+  DataCollectArrayControl: true
 }
 
 type Array1 = {
@@ -64,6 +65,7 @@ type Array1 = {
   ProjektbeskrivningControl: boolean,
   LakemedelstudierControl: boolean,
   Samarbete_Med_IndustrinControl: boolean,
+  DataCollectArrayControl:boolean
 }
 
 
@@ -157,7 +159,7 @@ type FormData = {
   Samarbete_Med_Industrin: string,
   Avtal_Industri: File,
   Variabellista: File[],
-  Arra: Array
+  Arra: Array[]
 }
 
 const INITIAL_DATA: FormData = {
@@ -428,6 +430,15 @@ export function Main() {
       next();
     }
 
+if(currentStepIndex === 3){
+  if(data.Arra.length<1){
+    isValid1.DataCollectArrayControl =false;
+  }
+  else{
+    isValid1.DataCollectArrayControl = true;
+  }
+}
+
     if (currentStepIndex === 2 || currentStepIndex === 4) {
       if (data.Diarienummer === "") {
         isValid1.DiarienummerControl = false;
@@ -476,7 +487,7 @@ export function Main() {
       isValid1.Bestallare_PostnummerControl,
       isValid1.Bestallare_PostortControl,
       isValid1.Bestallare_Fak_ReferensControl,
-
+isValid1.DataCollectArrayControl
       ].every((value) => value === true);
       console.log(allTrue);
       if (!allTrue) {
@@ -657,6 +668,12 @@ export function Main() {
       else {
         isValid1.Samarbete_Med_IndustrinControl = true;
       }
+      if(data.Arra.length<1){
+        isValid1.DataCollectArrayControl = false;
+      }
+      else{
+        isValid1.DataCollectArrayControl = true;
+      }
 
     }
 
@@ -681,7 +698,8 @@ export function Main() {
       isValid1.ProjekttitelControl,
       isValid1.ProjektbeskrivningControl,
       isValid1.LakemedelstudierControl,
-      isValid1.Samarbete_Med_IndustrinControl
+      isValid1.Samarbete_Med_IndustrinControl,
+      isValid1.DataCollectArrayControl,
 
       ].every((value) => value === true);
       console.log(allTrue);
@@ -716,39 +734,9 @@ export function Main() {
 
 
     <div className="container">
-       {/* <div className={currentStepIndex === 0 ? "firstpage" : ""}>
-        <div style={{ display: "flex" }} >
-          <div style={{ position: "relative", marginLeft: "0px", width: "138px", height: "10px", marginTop: "0px" }}>
-            <label className={currentStepIndex === 1 ? "dotFull" : "dot"} style={{ marginLeft: "60px" }} onClick={e => { setpage(1); a(); }}>1</label>
-            <label style={{ position: "relative", marginTop: "0px", marginLeft: "22px" }}>Om beställaren</label>
-          </div>
-          <div className="line1"></div>
-          <div style={{ position: "relative", marginLeft: "0px", marginTop: "0px", width: "178px", height: "10px" }}>
-            <label className={currentStepIndex === 2 ? "dotFull" : "dot"} style={{ position: "absolute", marginLeft: "65px" }} onClick={e => { setpage(2); a(); }}>2</label>
-            <label style={{ position: "absolute", marginTop: "34px", marginLeft: "1px" }}>Om forskningsprojektet</label>
-          </div>
-          <div className="line2"></div>
-          <div style={{ position: "relative", marginLeft: "0px", marginTop: "0px", width: "128px", height: "10px" }}>
-            <label className={currentStepIndex === 3 ? "dotFull" : "dot"} style={{ position: "absolute", marginLeft: "45px" }} onClick={e => { setpage(3); a(); }}>3</label>
-            <label style={{ position: "absolute", marginTop: "34px", marginLeft: "25px" }}>Datauttag</label>
-          </div>
-          <div className="line3"></div>
-          <div style={{ position: "relative", marginLeft: "0px", marginTop: "0px", width: "150px", height: "10px" }}>
-            <label className={currentStepIndex === 4 ? "dotFull" : "dot"} style={{ position: "absolute", marginLeft: "65px" }} onClick={e => { setpage(4); a(); }}>4</label>
-            <label style={{ position: "absolute", marginTop: "34px", marginLeft: "45px" }}>Kontrollera</label>
-          </div>
-          <div className="line4"></div>
-          <div style={{ position: "relative", marginLeft: "0px", marginTop: "0px", width: "178px", height: "10px" }}>
-            <label className={currentStepIndex === 5 ? "dotFull" : "dotDisable"} style={{ position: "absolute", marginLeft: "65px" }}>5</label>
-            <label style={{ position: "absolute", marginTop: "34px", marginLeft: "40px" }}>Bekräftelse</label>
-          </div>
-        </div>
-      </div> 
-
-
- */}
-
-     ///// {/* <div style={{paddingTop:"100px"}} className={currentStepIndex === 0 ? "firstpage" : ""}> 
+       
+<div className="progressbar">
+     <div  className={currentStepIndex === 0 ? "firstpage" : ""}> 
 
         <div style={{ paddingLeft:"30px", display: "flex", flexWrap:"wrap" }} >
           <div style={{ marginRight:"2px", display: "flex", flexDirection:"column", alignItems:"center"  }}>
@@ -776,43 +764,10 @@ export function Main() {
             <label >Bekräftelse</label>
           </div>
         </div>
-      </div> */}
-
-
-
+      </div>
+      </div>
       <br /><br /><br />
-      {/* <div className={currentStepIndex===0 ? "firstpage":""}>
-        <div style={{display:"flex"}} >
-          <div style={{position:"relative", marginLeft:"0px", width:"138px", height:"10px", marginTop:"0px"}}>
-          <label className={currentStepIndex ===1 ? "dotFull" :"dot"} style={{marginLeft:"60px"}} onClick={e=>{setpage(1); a();}}>1</label>
-        <label style={{position:"relative", marginTop:"0px", marginLeft:"22px"}}>Om beställaren</label>
-        </div>
-        <div className="line1"></div>
-        <div style={{position:"relative", marginLeft:"0px", marginTop:"0px", width:"178px", height:"10px"}}>
-          <label className={currentStepIndex ===2 ? "dotFull" :"dot"} style={{position:"absolute", marginLeft:"65px"}} onClick={e=>{setpage(2); a();}}>2</label>
-        <label style={{position:"absolute", marginTop:"34px", marginLeft:"1px"}}>Om forskningsprojektet</label>
-        </div>
-        <div className="line2"></div>
-        <div style={{position:"relative", marginLeft:"0px", marginTop:"0px", width:"128px", height:"10px"}}>
-          <label className={currentStepIndex ===3 ? "dotFull" :"dot"} style={{position:"absolute", marginLeft:"45px"}} onClick={e=>{setpage(3); a();}}>3</label>
-        <label style={{position:"absolute", marginTop:"34px", marginLeft:"25px"}}>Datauttag</label>
-        </div>
-        <div className="line3"></div>
-        <div style={{position:"relative", marginLeft:"0px", marginTop:"0px", width:"150px", height:"10px"}}>
-          <label className={currentStepIndex ===4 ? "dotFull" :"dot"} style={{position:"absolute", marginLeft:"65px"}} onClick={e=>{setpage(4); a();}}>4</label>
-        <label style={{position:"absolute", marginTop:"34px", marginLeft:"45px"}}>Kontrollera</label>
-        </div>
-        <div className="line4"></div>
-        <div style={{position:"relative", marginLeft:"0px", marginTop:"0px", width:"178px", height:"10px"}}>
-          <label className={currentStepIndex ===5 ? "dotFull" :"dotDisable"} style={{position:"absolute", marginLeft:"65px"}}>5</label>
-        <label style={{position:"absolute", marginTop:"34px", marginLeft:"40px"}}>Bekräftelse</label>
-        </div>
-        </div>
-        </div> */}
-
       
-
-
       <form style={{marginTop:"5vh"}}>
 
         {step}

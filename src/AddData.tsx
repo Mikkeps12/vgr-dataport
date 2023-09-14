@@ -323,21 +323,31 @@ const checkIndex = (index, newValue) => {
           <div style={{ width: "245px", height: "100px" }}>
             <label className="headingb3" >Kön</label>
             <br />
-            <label className="headingb16" htmlFor="all" ></label>
+            <label className="headinga16" htmlFor="all" ></label>
             <input onChange={(e) => updateArray({ Gender: e.target.value })} onChangeCapture={onChangeHandle} id="all"
               value={"Alla"} type={"radio"} name={"Gender"} style={{ marginTop: "16px", marginLeft: "0px" }} />Alla
 
             <br />
-            <input value={"Kvinna"} onChange={(e) => updateArray({ Gender: e.target.value })} onChangeCapture={onChangeHandle} type={"radio"} name={"Gender"} style={{ marginLeft: "0px", marginTop: "20px" }} />Kvinna
+            <input value={"Kvinna"} onChange={(e) => updateArray({ Gender: e.target.value })} onChangeCapture={onChangeHandle} 
+            type={"radio"} name={"Gender"} style={{ marginLeft: "0px", marginTop: "20px" }} />Kvinna
             <br />
-            <input value={"Man"} onChange={(e) => updateArray({ Gender: e.target.value })} onChangeCapture={onChangeHandle} type={"radio"} name={"Gender"} style={{ marginLeft: "0px", marginTop: "20px" }} />Man
+            <input value={"Man"} onChange={(e) => updateArray({ Gender: e.target.value })} onChangeCapture={onChangeHandle} 
+            type={"radio"} name={"Gender"} style={{ marginLeft: "0px", marginTop: "20px" }} />Man
           </div>
           <br /><br /><br />
-          <label className='headingb3' style={{ marginLeft: "0px", marginTop: "40px" }}>Ålder från</label>
-          <label className='headingb3' style={{ marginLeft: "189px" }}>Ålder till</label>
-          <br />
+          <div className="groupPost" >
+            <div>
+          <label className='headingb3' /* style={{ marginLeft: "0px", marginTop: "40px" }} */>Ålder från</label>
+          <br/>
           <SelectAgeFrom />
+          </div>
+          <div>
+          <label className='headingb3' style={{ marginLeft: "45px" }}>Ålder till</label>
+          <br />
+          
           <SelectAgeTo />
+          </div>
+          </div>
           <br /><br /><br />
           <div className='headingb3' style={{ marginTop: "37px" }}>Ange vad åldersintervallet avser</div>
           <input className="textBox" name={"AgeInterval"} onChange={(e) => updateArray({ AgeInterval: e.target.value })} type={"text"} value={AgeInterval}
@@ -357,7 +367,7 @@ const checkIndex = (index, newValue) => {
           <div className="borderline" style={{ marginTop: "64px" }}></div>
 
           <div className='headingb2' >Variabler</div>
-          <br />
+          
           <div className="headinga16" /* style={{ width: "592px", height: "48px" }} */>Önskade variabler ska vara angivna i godkänd etikprövningsansökan.
             De kan även bifogas som separat dokument. Om möjligt bifoga gärna maskininläsbar fil i excel.</div>
 
@@ -379,7 +389,8 @@ const checkIndex = (index, newValue) => {
               
               onChangeCapture={e => setFileName(true)} />
 
-              {!fileName && <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
+          {!fileName && <div>
+              {!fileName && <div className="vector" >
                 <div className="paperclip-1" >
                   <div className="paperclip-2">
                     <div className="paperclip-3" >
@@ -389,25 +400,25 @@ const checkIndex = (index, newValue) => {
                   </div>
                 </div>
               </div>}
-
+              </div>}
             </label>}
             {fileName && <label htmlFor="LabelTag" onClick={(e) => { onChangeHandle2(e); setFileName(!fileName); }}
               className="labelUploadFileRight">Ta bort fil
-              <div className="gg-trash labelUploadFileRight" id="LabelTag" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+              <div className="gg-trash" id="LabelTag" ></div>
             </label>}
           </div>
           <div className="borderline" style={{ marginTop: "64px" }}></div>
 
           <div className='headingb2'>Vilket filformat önskas vid leverans av data?</div>
           <br />
-          <div className="headingb16" >
-            <input type="radio" className="checkb" /* style={{ marginTop: "42px" }} */ value={"Textfil"} name={"FileFormat"}
+          <div className="headinga16" >
+            <input type="radio" className="checkb"  style={{ marginLeft: "0px" }} value={"Textfil"} name={"FileFormat"}
               onChange={(e) => { updateArray({ FileFormat: e.target.value }); setVisible2(false) }} onChangeCapture={onChangeHandle} />Textfil
-            <br /><br />
-            <input type="radio" className="checkb" value={"Excel"} name={"FileFormat"}
+            <br /><br /><br />
+            <input type="radio" className="checkb" style={{ marginLeft: "0px" }}value={"Excel"} name={"FileFormat"}
               onChange={(e) => { updateArray({ FileFormat: e.target.value }); setVisible2(false) }} onChangeCapture={onChangeHandle} />Excel
-            <br /><br />
-            <input type="radio" className="checkb" value={"Annat"} name={"FileFormat"}
+            <br /><br /><br />
+            <input type="radio" className="checkb" style={{ marginLeft: "0px" }}value={"Annat"} name={"FileFormat"}
               onChange={(e) => setVisible2(true)} onChangeCapture={onChangeHandle} />Annat
             <br />
             {isvisble2 && <div>
@@ -517,32 +528,32 @@ const checkIndex = (index, newValue) => {
           <div className="borderline" style={{ marginTop: "64px" }}></div>
           <div className="headingb2">Länkning/Samkörning av data</div>
           <br />
-          <div className="headingb3" /* style={{ width: "540px", height: "48px" }} */>Ska data från aktuellt register samköras med inkommande
+          <div className="headingb3" >Ska data från aktuellt register samköras med inkommande
             fil från beställaren?
           </div>
 
           <input type="radio" style={{ marginTop: "34px", marginLeft: "0px" }} value={"Nej"} name="SyncRegistersWithFile"
             onChange={(e) => updateArray({ SyncRegistersWithFile: e.target.value })} onChangeCapture={onChangeHandle} />
-          <div className="r1"/* style={{ width: "559px", height: "40px", marginLeft: "20px", marginTop: "-20px" }} */>Nej</div>
-
+          <div className="r1">Nej</div>
+<br/>
           <input type="radio" style={{ marginTop: "24px", marginLeft: "0px" }} value={"Ja"} name="SyncRegistersWithFile" onChange={(e) => updateArray({ SyncRegistersWithFile: e.target.value })} onChangeCapture={onChangeHandle} />
-          <div className="r1"/* style={{ width: "559px", height: "40px", marginLeft: "20px", marginTop: "-20px" }} */>Ja</div>
+          <div className="r1">Ja</div>
           <div className="headingb3">Ska data från aktuellt register samköras med andra datakällor?
           </div>
-          <br />
+          
           <input type="radio" style={{ marginTop: "34px", marginLeft: "0px" }} value={"Nej"} name="SyncRegisterFromOtherSources" onChange={(e) => {
             onChangeHandle; setVisible3(false); updateArray({
               SyncRegisterFromOtherSources: e.target.value
             })
           }} />
-          <div className="r1"/* style={{ width: "559px", height: "40px", marginLeft: "20px", marginTop: "-20px" }} */>Nej</div>
-
+          <div className="r1">Nej</div>
+<br/>
           <input type="radio" style={{ marginTop: "24px", marginLeft: "0px" }} value={"Ja"} name="SyncRegisterFromOtherSources" onChange={(e) => {
             onChangeHandle; setVisible3(true); updateArray({
               SyncRegisterFromOtherSources: e.target.value
             })
           }} />
-          <div className="r1"/* style={{ width: "559px", height: "40px", marginLeft: "20px", marginTop: "-20px" }} */>Ja</div>
+          <div className="r1">Ja</div>
 
           {isvisble3 && <div>
             <div className="headingb3">Ange datakällor</div>
@@ -566,8 +577,7 @@ const checkIndex = (index, newValue) => {
             <div className="info" >Hänvisa till sida EPM. Referera till stycke i EPM.</div>
           </div>}
           <button style={{ marginLeft: "0px" }} className="secondaryButton" onClick={ClearData}>Rensa datauttag</button>
-          {/* <button className="primaryButton" onClick={addData}>Lägg till detta */}
-          {/* datauttag till ansökan</button> */}
+          
           <button type="button" style={{ marginLeft: "10px", float: "none" }} className="primaryButton"
             onClick={AddData}>Lägg till detta datauttag till ansökan</button>
 
@@ -705,7 +715,7 @@ const checkIndex = (index, newValue) => {
     }
     return (
       <div className="select" style={{ marginLeft: "0px" }}>
-        <select style={{ marginLeft: "0px", width: "210px", marginTop: "6px" }} name={"AgeFrom"} onChange={(e) => { updateArray({ AgeFrom: e.target.value }); onHandleChange(e) }} value={AgeFrom}
+        <select style={{ marginLeft: "0px", width: "210px", marginTop: "8px" }} name={"AgeFrom"} onChange={(e) => { updateArray({ AgeFrom: e.target.value }); onHandleChange(e) }} value={AgeFrom}
           onChangeCapture={onChangeHandle}>
           {age.map((maps, index) =>
             <option age-id={index}>{maps}</option>
@@ -717,8 +727,8 @@ const checkIndex = (index, newValue) => {
   }
   function SelectAgeTo() {
     return (
-      <div className="select" style={{ marginLeft: "225px" }}>
-        <select style={{ marginLeft: "40px", width: "210px", marginTop: "6px" }} name={"AgeTo"} onChange={(e) => updateArray({ AgeTo: e.target.value })} value={AgeTo}
+      <div className="select" style={{ marginLeft: "5px" }}>
+        <select style={{ marginLeft: "40px", width: "210px", marginTop:"8px"}} name={"AgeTo"} onChange={(e) => updateArray({ AgeTo: e.target.value })} value={AgeTo}
           onChangeCapture={onChangeHandle}>
           {age.map((maps, index) => {
 
@@ -740,7 +750,7 @@ const checkIndex = (index, newValue) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return (
       <div>
-        <div className="datacollectio">
+        <div className="datacollection">
           <div className="datacollectionheading3">{props.maps.ID}Datauttag: {props.maps.Register}</div>
           <div className="datacollectionheading4">Skapat {date.toLocaleTimeString('sv-SE', options)}</div>
           <div className="datacollectionheading5" onClick={e => checkIndex(props.i, !isShowing[props.i].show)} typeof="button">Visa mer innehåll</div>

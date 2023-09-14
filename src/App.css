@@ -2,6 +2,7 @@ html{
   margin: 0;
   background-color: rgb(243, 239, 239);
   padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -15,6 +16,13 @@ html{
   justify-content: center;
 }
 
+.progressbar{
+  padding-top:100px;
+}
+
+.firstpage{
+  display: none;
+}
 
 .container{
   display: block;
@@ -23,20 +31,7 @@ html{
   width: 100%;
   max-width: fit-content;
   /* padding: 100px 360px 100px 360px; */
-  
-  
 }
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .heading2{
   font-size: 23px;
@@ -45,8 +40,7 @@ html{
   height: 35px;
   margin-top: 0px;
   position: relative;
-  font-family: Helvetica;
-  
+  font-family: Helvetica; 
 }
 
 .heading2a{
@@ -64,7 +58,7 @@ html{
   font-size: 23px;
   font-weight: 700;
   margin-left: 0px;
- height: 35px;
+ height: auto;
   margin-top: 10px;
   position: relative;
   font-family: Helvetica;
@@ -90,11 +84,12 @@ html{
 }
 
 .textBox{
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   position:relative;
   margin-left: 0px;
-  margin-top: 0px;
+  margin-top: 8px;
   max-width: 592px;
   width: 100%;
   height: 44px;
@@ -114,15 +109,16 @@ html{
   font-family: Helvetica;
 }
 .textBoxCity{
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   position:relative;
-  margin-left: 31px;
+  margin-left: 40px;
   margin-top: 8px;
   height: 44px;
   padding-left: 5px;
   border-radius: 4px;
-  width: 275px;
+  width: 276px;
   
   font-family: Helvetica;
 }
@@ -137,6 +133,7 @@ html{
 }
 
 .textBoxZip{
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   position:relative;
@@ -145,7 +142,7 @@ html{
   height: 44px;
   padding-left: 5px;
   border-radius: 4px;
-  width: 275px;
+  width: 276px;
   
   font-family: Helvetica;
 }
@@ -153,7 +150,7 @@ html{
   font-size: 16px;
   font-weight: 700;
   position:relative;
-  margin-left: 31px;
+  margin-left: 40px;
   margin-top: 40px;
   font-family: Helvetica;
 }
@@ -167,27 +164,9 @@ html{
   font-family: Helvetica;
 }
 
-
-
-/* .d{
-  font-size: small;
-  font-weight: bold;
-  position: relative;
-  margin-left: 16px;
-  margin-top: 50px;
-  font-family: Helvetica;
-}
-.e{
-  font-size: small;
-  font-weight: bold;
-  position: relative;
-  margin-left: 16px;
-  margin-top: 16px;
-  font-family: Helvetica;
-} */
-
 .info{
-  max-width: 570px;
+  box-sizing: border-box;
+  max-width: 592px;
   width: 100%;
   height: auto;
   background-color: rgb(225, 242, 247);
@@ -224,7 +203,7 @@ select{
   margin-top: 20px;
 }
 
-.Form2{
+/* .Forf{
   background-color: white;
   max-width: 892px;
   width: 100%;
@@ -232,7 +211,7 @@ select{
   margin-left: 0px;
   margin-top: 20px;
   
-}
+} */
 .secondaryButton{
   border-color: rgb(0, 98, 152);
   background-color: transparent;
@@ -258,11 +237,6 @@ select{
   font-family: Helvetica;
 }
 
-
-
-
-
-
 .heading1{
   font-size: 41px;
   font-weight:600;
@@ -279,29 +253,15 @@ select{
   color:rgb(255, 255, 255);
 }
 
-.header{
-  background-color: aqua;
-  height: 60px;
-}
-
-.gaNasta{
-  background-color: blue;
-}
-
-.formA{
-  background-color: blue;
-  height: 300px;
-  width: 300px;
-}
-
 .textArea{
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
   height: 234px;
-  max-width:595px;
+  max-width:592px;
   width: 100%;
   margin-left: 1px;
-  margin-top: 0px;
+  margin-top: 8px;
   font-family: Helvetica;
 }
 
@@ -312,19 +272,6 @@ select{
   font-family: Helvetica;
 }
 
-.content{
-  max-height: 100px;
-  
-  overflow: hidden;
-  transition: all 0.5s;
-}
-
-.content.show{
-  height: auto;
-  max-height:max-content;
-  
-  transition: all 0.5s;
-}
 #date{
   width: 245px;
   height: 44px;
@@ -338,25 +285,6 @@ select{
 .header_progress{
   margin-left: 40px;
 }
-
-.progressbar{
-  background-color: rgb(0, 98, 152);
-  color: white;
-  display: flexbox;
-  font-size: 16px;
-  margin-left: 40px;
-  font-family: Helvetica;
-}
-
-.noprogressbar{
-  background-color: transparent;
-  color:black;
-  display: flexbox;
-  font-size: 16px;
-  margin-left: 40px;
-  font-family: Helvetica;
-}
-
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
@@ -385,18 +313,14 @@ input[type="date"]{
 
 .flex_div{
   display: flexbox;
-  
-  
-
 }
 
 .backgroundFileNoFile{
   background-color: #F4F4F4;
-  
   height: 44px;
   margin-left: 0px;
-  width: 603px;
-  
+  max-width: 603px; 
+  width:100%;
   border-radius: 4px;
   margin-top: 8px;
 }
@@ -405,6 +329,7 @@ input[type="date"]{
 #inputTag8{
   display: none;
 }
+
 #labelTag{
   cursor: pointer;
   border-radius: 4px;
@@ -430,26 +355,27 @@ input{
 }
 
 .error{
+  box-sizing: border-box;
   border: solid #8C1A18 3px;
   border-width: 2px;
   border-radius: 4px;
-  //background-color: #F8DEDD;
   font-size: 16px;
   font-weight: 400;
   position:relative;
   margin-left: 0px;
-  margin-top: 0px;
-  width: 600px;
+  margin-top: 8px;
+  max-width: 592px;
+  width:100%;
   height: 44px;
   padding-left: 5px;
   font-family: Helvetica;
 }
 
 .errorZip{
+  box-sizing: border-box;
   border: solid #8C1A18 3px;
   border-width: 2px;
   border-radius: 4px;
-  //background-color: #F8DEDD;
   font-size: 16px;
   font-weight: 400;
   position:relative;
@@ -463,14 +389,14 @@ input{
 }
 
 .errorCity{
+  box-sizing: border-box;
   border: solid #8C1A18 3px;
   border-width: 2px;
   border-radius: 4px;
-  //background-color: #F8DEDD;
   font-size: 16px;
   font-weight: 400;
   position:relative;
-  margin-left: 31px;
+  margin-left: 40px;
   margin-top: 8px;
   height: 44px;
   padding-left: 5px;
@@ -490,8 +416,8 @@ input{
 
 .paragraphRed2{
   color:#8C1A18;
-  margin-left: 31px;
-  margin-top: 0px;
+  margin-left: 40px;
+  margin-top: 8px;
   font-size: 16px;
   font-weight: 400;
   position: relative;
@@ -501,11 +427,10 @@ input{
 .headdiv{
   background-color: white;
   padding:64px 100px 64px 100px;
-  
-  
 }
+
 .dotFull {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   font-size: 24px;
   border-width: 2px;
   line-height: 34px;
@@ -560,18 +485,15 @@ input{
 }
 
 
-
-
 .headingc16{
   margin-top: -10px;
-   margin-left: 0;
-            background-color: white;
+  margin-left: 0;
+  background-color: white;
             
 }
 
-
 .dot {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
   font-size: 24px;
   border-width: 2px;
   line-height: 28px;
@@ -599,7 +521,6 @@ input{
   text-align: center;
   border: solid;
   border-color: gray;
-  
 }
 
 .line1{
@@ -609,8 +530,7 @@ input{
   width:100%;
   margin-top: 18px;
   border: 1px solid black;
-  margin-left: 76px;
-  
+  margin-left: 76px; 
   z-index: 2;
 }
 
@@ -622,7 +542,6 @@ input{
   margin-top: 18px;
   border: 1px solid black;
   margin-left: 222px;
-  
   z-index: 2;
 }
 
@@ -634,8 +553,7 @@ input{
   margin-top: 18px;
   border: 1px solid black;
   margin-left: 380px;
-  
-  //z-index: 2;
+  z-index: 2;
 }
 
 .line4{
@@ -646,24 +564,23 @@ input{
   margin-top: 18px;
   border: 1px solid black;
   margin-left: 525px;
-  
   z-index: 2;
 }
+
 .vector{
-position: absolute;
+position: relative;
 width:29px;
 height: 27px;
-
 color:rgb(0, 98, 152);
 background-color: transparent;
-margin-top: 0px;
-
+margin-top: -12px;
 align-items: center;
 -webkit-transform: rotate(330deg);
   -moz-transform: rotate(330deg);
   -ms-transform: rotate(330deg);
-  transform: rotate(330deg);
-  
+  transform: rotate(330deg); 
+  float: right;
+  justify-items: center;
 }
 
 .vector .paperclip-1 {
@@ -676,7 +593,6 @@ align-items: center;
   position: absolute;
   top: 28%;
   right: 10%;
-  
 }
 
 .vector .paperclip-2 {
@@ -740,22 +656,18 @@ align-items: center;
   background-color: inherit;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 4px;
-
   position: absolute;
   right: 0;
   top: -132%;
 }
 
-.ellipse{
-
-}
-
 .datacollection{
   
-    width: 592px;
-    //height: 100px;
+    max-width: 592px;
+    width: 100%;
+    height: 500px;
     background-color: rgb(225, 242, 247);
-    //padding: 24px;
+    /* //padding: 24px; */
     margin-left: 0px;
     max-height: 139px;
     margin-top: 20px;
@@ -791,7 +703,7 @@ align-items: center;
   font-family: Helvetica;
 }
 
-.datacollectionChange{
+/* .datacollectionChange{
   width: 550px;
     
     background-color:white;
@@ -810,10 +722,10 @@ align-items: center;
     
     width: 603px;
   }
-}
+} */
 
 .buttonAndra{
-  margin-left: 500px;
+  float:right;
   margin-top: -80px;
   position:absolute;
 }
@@ -832,15 +744,18 @@ align-items: center;
       inset 2px 0 0;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
-  margin-top: 4px
+  margin-top: -13px;
+  margin-left: -15px;
 }
+
 .gg-trash::after,
 .gg-trash::before {
   content: "";
   display: block;
   box-sizing: border-box;
-  position: absolute
+  position: relative;
 }
+
 .gg-trash::after {
   background: currentColor;
   border-radius: 3px;
@@ -849,6 +764,7 @@ align-items: center;
   top: -4px;
   left: -5px
 }
+
 .gg-trash::before {
   width: 10px;
   height: 4px;
@@ -858,11 +774,6 @@ align-items: center;
   border-top-right-radius: 2px;
   top: -7px;
   left: -2px
-}
-
-.firstpage{
-  display: none;
-  background-color: #8C1A18;
 }
 
 /*Switch toggle */
@@ -932,34 +843,29 @@ input:checked + .slider:before {
 
 .labelUploadFileLeft{
   margin-top:10px;
-   margin-left:15px;
-    position: absolute;
-    width: 450px;
-    height: 20px;
-    overflow: hidden;
-
+  margin-left:15px;
+  position: absolute;
+  width: 450px;
+  height: 20px;
+  overflow: hidden;
 }
 
 .labelUploadFileRight{
   margin-top:10px;
-   margin-left:490px;
-   
-   position: absolute;
-    color: rgb(0, 98, 152);
-    cursor: pointer;
-    display: flex;
+  
+  float:right;
+  position: relative;
+  color: rgb(0, 98, 152);
+  cursor: pointer;
+  display: block;
 }
 
 .labelRemoveFileRight{
   margin-top:10px;
-   margin-left:490px;
-    position: absolute;
-    color: rgb(0, 98, 152);
-    cursor: pointer;
-}
-
-u{
+  margin-left:490px;
+  position: absolute;
   color: rgb(0, 98, 152);
+  cursor: pointer;
 }
 
 .checkbox{
@@ -970,22 +876,23 @@ u{
 
 .errorBackground{
   background-color: #F8DEDD;
-  height: 44px;
-  margin-top: -10px;
-  
+  height: auto;
+  margin-top: 0;
+  padding: 1px;
 }
 
 .groupPost{
   display: flex;
+  max-width: 592px;
+  width: 100%;
+  
 }
 
 .collection-container{
   width: 590px;
   background-color: white;
-  padding: 24px 0px 24px 24px;
-  
-  border: rgb(225, 242, 247)  solid 2px;
-  
+  padding: 24px 0px 24px 24px; 
+  border: rgb(225, 242, 247)  solid 2px; 
 }
 
 .datakalla, .urval, .variabler, .filformat, .leverans{
@@ -995,17 +902,30 @@ font-weight: 700;
 padding-bottom: 16px;
 }
 
+.backgroundFileNoFilePreview{
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  height: auto;
+  margin-left: 0px;
+  max-width: 603px; 
+  width:100%;
+  border-radius: 4px;
+  margin-top: 18px;
+  
+  overflow: hidden;
+  padding: 15px;
+
+}
 
 
-
-@media (max-width: 376px) { 
-  .form1{
-    background-color: white;
-    width: 450px;
-    height: 200px;
-    margin-left: 0px;
-    margin-top: 20px;
+@media (max-width: 776px ){
+  .progressbar{
+  display: none;
   }
+}
+
+
+@media (max-width: 476px) { 
   
   .App {
     margin-left: 0px;
@@ -1016,7 +936,6 @@ padding-bottom: 16px;
 
   .headdiv{
     margin-left: 0px;
-    
     padding:24px 24px 24px 24px;
     width: 603px;
   }
@@ -1029,12 +948,25 @@ padding-bottom: 16px;
     margin-top: 20px;
   }
 
-  .info{
-    width: 380px;
-    
-    padding: 10px;
-    font-size:small;
+  .datacollection{
+  
+    width: 100%;
+    height: 500px;
+    background-color: rgb(225, 242, 247);
+    /* //padding: 24px; */
+    margin-left: 0px;
+    max-height: 139px;
+    margin-top: 20px;
     font-family: Helvetica;
+}
+
+  .info{
+    /* width: 380px;  */
+    padding: 10px;
+    font-size:16px;
+    font-family: Helvetica;
+    width: 100%;
+    justify-items: center;
     
   }
 
@@ -1042,24 +974,9 @@ padding-bottom: 16px;
     width: 450px;
   }
 
-  .header_progress{
-    margin-left: 20px;
-    font-size:xx-small;
-    
-  }
-
   .textBox{
     width:100%;
   }
-
-  .info{
-    width: 100%;
-    justify-items: center;
-  }
-
-  
-
-  
 
   
 
@@ -1068,9 +985,8 @@ padding-bottom: 16px;
     font-weight: 700;
     position:relative;
     margin-left: 0px;
-    margin-top: 8px;
-    
-    width: 188px;
+    margin-top: 8px; 
+    width: 275px;
     font-family: Helvetica;
   }
   .textBoxZip{
@@ -1079,8 +995,7 @@ padding-bottom: 16px;
     position:relative;
     margin-left: 0px;
     margin-top: 8px;
-    
-    width: 188px;
+    width: 275px;
     font-family: Helvetica;
   }
 
@@ -1091,7 +1006,6 @@ padding-bottom: 16px;
     margin-left: 0px;
     margin-top: 44px;
     font-family: Helvetica;
-    
   }
   
   .headingb3Zip{
@@ -1106,43 +1020,76 @@ padding-bottom: 16px;
   .textArea{
     height: 200px;
     width:100%;
-    margin-left: 2px;
-    
+    margin-left: 2px;  
   }
 
   .error{
     border: solid #8C1A18 3px;
     border-width: 2px;
     border-radius: 4px;
-    background-color: #F8DEDD;
     font-size: 16px;
     font-weight: 400;
     position:relative;
     margin-left: 0px;
     margin-top: 0px;
-    width: 400px;
+    width: 100%;
     height: 44px;
     padding-left: 5px;
     font-family: Helvetica;
+  }
+
+  
+  
+  .errorZip{
+    box-sizing: border-box;
+    border: solid #8C1A18 3px;
+    border-width: 2px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 8px;
+    height: 44px;
+    padding-left: 5px;
+    width: 275px;
+    font-family: Helvetica;
+    
+  }
+
+  .errorCity{
+    box-sizing: border-box;
+    border: solid #8C1A18 3px;
+    border-width: 2px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 8px;
+    height: 44px;
+    padding-left: 5px;
+    width: 275px;
+    font-family: Helvetica;
+    
   }
 
   .backgroundFileNoFile{
     background-color: #F4F4F4;
     height: 44px;
     margin-left: 0px;
-    width: 400px;
+    width: 100%;
     border-radius: 4px;
     margin-top: 8px;
   }
   
-
   .headdiv{
     width: 500px;
     
   }
 
   .groupPost{
-    display: inline-block;
+    display: block;
     margin-left: 0;
   }
 

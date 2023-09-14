@@ -11,17 +11,18 @@ export function Preview(data, isValid1, Qupdate) {
     return (
         <>
             <div className='heading1' >Granska och skicka in</div>
-            <div className="Form2">
+            
                 <div className='headdiv'>
 
-                    <br /><br /><br />
-                    <div className="headingb2" style={{ width: "592px", height: "44px", marginBottom: "10px" }}>Om beställaren
+                    
+                    <div className="headingb2" >Om beställaren
 
-
-                        <button onClick={f} className='secondaryButton' value={1} style={{ float: "right", marginTop: "0px" }}>Gå till steg 1</button>
+                    <button className='secondaryButton' onClick={f} value={2} style={{ float: "right", marginTop: "0px" }}>Gå till steg 1</button>
+                        
                     </div>
+                    <br/>
                     {!data.ForskningshuvudmanControl && <><div className="errorBackground"><p className="paragraphRed"
-                        style={{ marginTop: "10px", marginLeft: "15px", position: "absolute" }}>Obligatoriska uppgifter saknas i steg 1</p></div><br /></>}
+                        style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Obligatoriska uppgifter saknas i steg 1</p></div><br /></>}
                     <div className="headingb3">Forskningshuvudman</div>
 
                     {data.ForskningshuvudmanControl ? <div className="text_buyer">{data.Forskningshuvudman}</div> : <div className="paragraphRed">(!) Forskningshuvudman saknas</div>}
@@ -68,18 +69,13 @@ export function Preview(data, isValid1, Qupdate) {
 
 
 
-
-
-
-
-
-                    <div className="headingb2" style={{ marginTop: "0px", marginLeft: "0px" }}>Om forskningsprojektet
+                    <div className="headingb2" >Om forskningsprojektet
                         <button className='secondaryButton' onClick={f} value={2} style={{ float: "right", marginTop: "0px" }}>Gå till steg 2</button>
                     </div>
 
                     <br />
                     {!data.ProjekttitelControl && <><div className="errorBackground"><p className="paragraphRed"
-                        style={{ marginTop: "10px", marginLeft: "15px", position: "absolute" }}>Obligatoriska uppgifter saknas i steg 2</p></div><br /></>}
+                        style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Obligatoriska uppgifter saknas i steg 2</p></div><br /></>}
                     <div className="headingb3">Projektets titel</div>
                     {data.ProjekttitelControl ? <div className="text_buyer">{data.Projekttitel}</div> : <div className="paragraphRed">(!) Projektets titel saknas</div>}
                     <div className="headingb3">Beskrivning av forskningprojektet</div>
@@ -113,19 +109,18 @@ export function Preview(data, isValid1, Qupdate) {
 
 
 
-
-
-
-
-                    <div className="headingb2" style={{ marginTop: "0px", marginLeft: "0px" }}>Tillagda datauttag
+                    <div className="headingb2" >Tillagda datauttag
                         <button className='secondaryButton' onClick={f} value={3} style={{ marginTop: "0px", float: "right" }}>Gå till steg 3</button>
                     </div>
+                    <br/>
+                    {!data.DataCollectArrayControl && <><div className="errorBackground"><p className="paragraphRed"
+                        style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Obligatoriska uppgifter saknas i steg 3</p></div><br /></>}
                     {data.Arra.map((maps, index) =>
-                        <><div>
-                            <div className="datacollection">
+                        <div style={{height:"500px"}}>
+                            <div className="datacollection" >
                                 <div className="datacollectionheading3">{index + 1}. Datauttag: {maps.Goverment}</div>
                                 <div className="datacollectionheading4">Skapat {date.toDateString()}</div>
-                                <div className="datacollectionheading5" onClick={e => setIsShowing(!isShowing)} typeof="button">Visa mer innehåll</div>
+                                {/* <div className="datacollectionheading5" onClick={e => setIsShowing(!isShowing)} typeof="button">Visa mer innehåll</div> */}
 
                                 <div>Datakälla:{maps.Register}</div>
                                 <div>Från datum: {maps.FromDate}</div>
@@ -152,7 +147,7 @@ export function Preview(data, isValid1, Qupdate) {
                             </div>
 
 
-                        </div></>
+                        </div>
                     )}
 
 
@@ -160,49 +155,46 @@ export function Preview(data, isValid1, Qupdate) {
 
 
 
-
-
-
-
                     <div className="flex_div">
-                        <div className="headingb2" style={{ marginTop: "0px", marginLeft: "0px" }}>Samtliga bifogade filer</div>
-                        {data.PUB_Avtal != null ? <div className="backgroundFileNoFile">{data.PUB_Avtal.name}</div> : ""}
-                        <br />
-                        {data.Kompletta_handlingar_Fil != null ? <div className="backgroundFileNoFile">
-                            {data.Kompletta_handlingar_Fil.name}</div> : ""}
-                        <br />
-                        {data.Ansokan_Fil != null ? <div className="backgroundFileNoFile">{data.Ansokan_Fil.name}</div> : ""}
-                        <br />
-                        {data.Beslut_Fil != null ? <div className="backgroundFileNoFile">{data.Beslut_Fil.name}</div> : ""}
-                        <br />
+                        <div className="headingb2" >Samtliga bifogade filer</div>
+                        {data.PUB_Avtal.size >0 && <div className="backgroundFileNoFilePreview" >{data.PUB_Avtal.name} </div>}
+                        
+                        {data.Kompletta_handlingar_Fil.size >0  && <div className="backgroundFileNoFilePreview" >
+                            {data.Kompletta_handlingar_Fil.name}</div>}
+                        
+                        {data.Ansokan_Fil.size >0 && <div className="backgroundFileNoFilePreview">{data.Ansokan_Fil.name}</div>}
+                        
+                        {data.Beslut_Fil.size >0 && <div className="backgroundFileNoFilePreview">{data.Beslut_Fil.name}</div>}
+                        
+                        {data.Andringansokan_Fil.size >0  && <div className="backgroundFileNoFilePreview">{data.Andringansokan_Fil.name}</div>}
+                        
+                        {data.Beslut_Andringansokan.size >0  && <div className="backgroundFileNoFilePreview">{data.Beslut_Andringansokan.name}</div>}
                         {data.Komplettering_Fil.map((file) => {
                             return (
-                                <div className="backgroundFileNoFile">{file.name}</div>
+                                <div className="backgroundFileNoFilePreview">{file.name}</div>
                             )
                         })}
-                        {data.Avtal_Industri != null ? <div className="backgroundFileNoFile">{data.Avtal_Industri.name}</div> : ""}
-                        <br />
-                        {data.Andringansokan_Fil != null ? <div className="backgroundFileNoFile">{data.Andringansokan_Fil.name}</div> : ""}
-                        <br />
-                        {data.Projektbeskrivning_Fil != null ? <div className="backgroundFileNoFile">{data.Projektbeskrivning_Fil.name}</div> : ""}
-                        <br />
+                        {data.Avtal_Industri.size >0  && <div className="backgroundFileNoFilePreview">{data.Avtal_Industri.name}</div>}
+                        
+                        {data.Projektbeskrivning_Fil.size >0  && <div className="backgroundFileNoFilePreview">{data.Projektbeskrivning_Fil.name}</div>}
+                        
 
                         {data.Variabellista.map((list) => {
                             return (
 
-                                <div className="backgroundFileNoFile">{list.name}</div>
+                                <div className="backgroundFileNoFilePreview">{list.name}</div>
 
                             )
                         })}
 
-                        {/* {data.Arra[0].V !=null ? data.Arra[0].V.name: ""} */}
+                        
 
                     </div>
                     <br />
 
 
                 </div>
-            </div>
+            
         </>
     )
 

@@ -230,21 +230,23 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                 onChangeCapture={e => setFileName(true)} />
 
 
-
-                            <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                <div className="paperclip-1" >
-                                    <div className="paperclip-2">
-                                        <div className="paperclip-3" >
-                                            <div className="paperclip-4">
+                            {!fileName && <div>
+                                <div className="vector" >
+                                    <div className="paperclip-1" >
+                                        <div className="paperclip-2">
+                                            <div className="paperclip-3" >
+                                                <div className="paperclip-4">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>}
+
                         </label>}
                         {fileName && <label htmlFor="LabelTag" onClick={e => { updateFields({ Kompletta_handlingar_Fil: {} }); setFileName(!fileName) }}
                             className="labelUploadFileRight">Ta bort fil
-                            <div className="gg-trash labelUploadFileRight" id="LabelTag" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                            <div className="gg-trash" id="LabelTag" ></div>
                         </label>}
                     </div>}
 
@@ -262,21 +264,23 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                     onChangeCapture={e => setFileName2(true)} />
 
 
-
-                                <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                    <div className="paperclip-1" >
-                                        <div className="paperclip-2">
-                                            <div className="paperclip-3" >
-                                                <div className="paperclip-4">
+                                {!fileName2 && <div>
+                                    <div className="vector" >
+                                        <div className="paperclip-1" >
+                                            <div className="paperclip-2">
+                                                <div className="paperclip-3" >
+                                                    <div className="paperclip-4">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>}
+
                             </label>}
                             {fileName2 && <label htmlFor="LabelTag2" onClick={e => { updateFields({ Ansokan_Fil: {} }); setFileName2(!fileName2) }}
                                 className="labelUploadFileRight">Ta bort fil
-                                <div className="gg-trash labelUploadFileRight" id="LabelTag2" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                                <div className="gg-trash" id="LabelTag2" ></div>
                             </label>}
                         </div>
                         <br /><br />
@@ -292,21 +296,23 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                     onChangeCapture={e => setFileName3(true)} />
 
 
-
-                                <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                    <div className="paperclip-1" >
-                                        <div className="paperclip-2">
-                                            <div className="paperclip-3" >
-                                                <div className="paperclip-4">
+                                {!fileName3 && <div>
+                                    <div className="vector" >
+                                        <div className="paperclip-1" >
+                                            <div className="paperclip-2">
+                                                <div className="paperclip-3" >
+                                                    <div className="paperclip-4">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>}
+
                             </label>}
                             {fileName3 && <label htmlFor="LabelTag3" onClick={e => { updateFields({ Beslut_Fil: {} }); setFileName3(!fileName3) }}
                                 className="labelUploadFileRight">Ta bort fil
-                                <div className="gg-trash labelUploadFileRight" id="LabelTag3" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                                <div className="gg-trash" id="LabelTag3" ></div>
                             </label>}
                         </div>
                     </div>}
@@ -336,21 +342,22 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                             onChangeCapture={e => setFileName4(true)} />
 
 
-
-                                        <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                            <div className="paperclip-1" >
-                                                <div className="paperclip-2">
-                                                    <div className="paperclip-3" >
-                                                        <div className="paperclip-4">
+                                        {maps.Visible && <div>
+                                            <div className="vector" >
+                                                <div className="paperclip-1" >
+                                                    <div className="paperclip-2">
+                                                        <div className="paperclip-3" >
+                                                            <div className="paperclip-4">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>}
                                     </label>}
                                     {maps.file && <label htmlFor="LabelTag4" onClick={e => removeFile(index, maps.lastModified)}
                                         className="labelUploadFileRight">Ta bort fil
-                                        <div className="gg-trash labelUploadFileRight" id="LabelTag4" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                                        <div className="gg-trash" id="LabelTag4" ></div>
 
                                     </label>}
 
@@ -395,26 +402,25 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                 onChangeCapture={e => setFileName5(true)} />
 
 
-
-                            <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                <div className="paperclip-1" >
-                                    <div className="paperclip-2">
-                                        <div className="paperclip-3" >
-                                            <div className="paperclip-4">
+                            {!fileName5 && <div>
+                                <div className="vector" >
+                                    <div className="paperclip-1" >
+                                        <div className="paperclip-2">
+                                            <div className="paperclip-3" >
+                                                <div className="paperclip-4">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>}
                         </label>}
                         {fileName5 && <label htmlFor="LabelTag5" onClick={e => { updateFields({ Andringansokan_Fil: {} }); setFileName5(!fileName5) }}
                             className="labelUploadFileRight">Ta bort fil
-                            <div className="gg-trash labelUploadFileRight" id="LabelTag5" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                            <div className="gg-trash" id="LabelTag5" ></div>
                         </label>}
                     </div>}
                     <br /><br />
-
-
 
                     {isVisible && <label className="headingb3">Bifoga ändringsbeslut</label>}
 
@@ -427,32 +433,28 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                 onChangeCapture={e => setFileName6(true)} />
 
 
-
-                            <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                <div className="paperclip-1" >
-                                    <div className="paperclip-2">
-                                        <div className="paperclip-3" >
-                                            <div className="paperclip-4">
+                            {!fileName6 && <div>
+                                <div className="vector" >
+                                    <div className="paperclip-1" >
+                                        <div className="paperclip-2">
+                                            <div className="paperclip-3" >
+                                                <div className="paperclip-4">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>}
                         </label>}
                         {fileName6 && <label htmlFor="LabelTag6" onClick={e => { updateFields({ Beslut_Andringansokan: {} }); setFileName6(!fileName6) }}
                             className="labelUploadFileRight">Ta bort fil
-                            <div className="gg-trash labelUploadFileRight" id="LabelTag6" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                            <div className="gg-trash" id="LabelTag6" ></div>
                         </label>}
                     </div>}
 
                     <br /><br /><br />
 
-
-
-
                     <div>
-
-
                         <div className="borderline" style={{ marginTop: "0px" }}></div>
 
                         <div className='headingb2'>Beskrivning av forskningsprojektet</div>
@@ -467,8 +469,6 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
 
                         <br /><br />
                         <div className="headingb3">Sammanfattande projektbeskrivning</div>
-
-
 
                         <textarea className="textArea"
                             onKeyDown={handleKeyDown} name="ProjektbeskrivningControl" value={Projektbeskrivning}
@@ -488,20 +488,22 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                 type="file" onChange={e => updateFields({ Projektbeskrivning_Fil: e.target.files[0] })}
                                 onChangeCapture={e => setFileName7(true)} />
 
-                                <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                    <div className="paperclip-1" >
-                                        <div className="paperclip-2">
-                                            <div className="paperclip-3" >
-                                                <div className="paperclip-4">
+                                {!fileName7 && <div>
+                                    <div className="vector" >
+                                        <div className="paperclip-1" >
+                                            <div className="paperclip-2">
+                                                <div className="paperclip-3" >
+                                                    <div className="paperclip-4">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>}
                             </label>}
                             {fileName7 && <label htmlFor="LabelTag7" onClick={e => { updateFields({ Projektbeskrivning_Fil: {} }); setFileName7(!fileName7) }}
                                 className="labelUploadFileRight">Ta bort fil
-                                <div className="gg-trash labelUploadFileRight" id="LabelTag7" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                                <div className="gg-trash" id="LabelTag7" ></div>
                             </label>}
 
                         </div>
@@ -522,7 +524,7 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                         <div className='headingb2'>Gäller projektet läkemedelsstudier?</div>
                         <br /><br />
                         {!i.LakemedelstudierControl && <><div className="errorBackground"><p className="paragraphRed"
-                            /* style={{ marginTop: "15px", marginLeft: "15px", position: "absolute" }} */>Välj någon av alternativen</p></div><br /></>}
+                            style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Välj någon av alternativen</p></div><br /></>}
                         <input type={"radio"} style={{ marginLeft: "0px" }} name="lakemedelstudier" value={"Nej"}
                             checked={Lakemedelstudier === "Nej"} onChange={(e) => updateFields({ Lakemedelstudier: e.target.value })} />
                         <div className="r1">Nej, projektet gäller inte
@@ -545,22 +547,22 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
 
 
                         <div className='headingb2' >Genomförs projektet i samarbete med industrin?</div>
-                        <div className="eadinga3" style={{ maxWidth: "591px", width:"100%", height: "auto", marginLeft: "0px" }}>Om forskningsprojektet genomförs i
+                        <div className="eadinga3" style={{ maxWidth: "591px", width: "100%", height: "auto", marginLeft: "0px" }}>Om forskningsprojektet genomförs i
                             samarbete med industrin behöver avtal mellan företaget och berörd huvudman bifogas
                             <br /><br />
                             <u>
 
                                 Överenskommelse om samverkan mellan SKR och industrin om kvalitetsregister</u>
                         </div>
-                        <br /><br />
+                        <br />
 
 
 
 
 
-                        <br /><br /><br /><br />
+
                         {!i.Samarbete_Med_IndustrinControl && <><br /><br /><div className="errorBackground"><p className="paragraphRed"
-                            style={{ marginTop: "10px", marginLeft: "15px", position: "absolute" }}>Välj någon av alternativen</p></div><br /></>}
+                            style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Välj någon av alternativen</p></div><br /></>}
 
                         <input type={"radio"} className="r3"/* style={{ marginLeft: "0px", marginTop: "42px" }} */ name="Samarbete_Med_Industrin" value={"Ja"}
                             checked={Samarbete_Med_Industrin === "Ja"} onChange={(e) => { updateFields({ Samarbete_Med_Industrin: e.target.value }); setIsVisible3(false) }} />Nej, projektet genomförs inte i
@@ -581,21 +583,22 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                     <input id="inputTag8" type="file" onChange={e => updateFields({ Avtal_Industri: e.target.files[0] })}
                                         onChangeCapture={e => setFileName8(true)} />
 
-
-                                    <div className="vector" style={{ marginLeft: "460px", marginTop: "10px" }}>
-                                        <div className="paperclip-1" >
-                                            <div className="paperclip-2">
-                                                <div className="paperclip-3" >
-                                                    <div className="paperclip-4">
+                                    {!fileName8 && <div>
+                                        <div className="vector" >
+                                            <div className="paperclip-1" >
+                                                <div className="paperclip-2">
+                                                    <div className="paperclip-3" >
+                                                        <div className="paperclip-4">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>}
                                 </label>}
                                 {fileName8 && <label htmlFor="LabelTag8" onClick={e => { updateFields({ Avtal_Industri: {} }); setFileName8(!fileName8) }}
                                     className="labelUploadFileRight">Ta bort fil
-                                    <div className="gg-trash labelUploadFileRight" id="LabelTag8" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                                    <div className="gg-trash" id="LabelTag8" ></div>
                                 </label>}
 
 

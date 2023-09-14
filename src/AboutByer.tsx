@@ -332,8 +332,8 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                         />
 
 
-                            {!fileName && <div className="containerUpload">
-                            <div className="vector" style={{marginLeft:"460px", marginTop:"-12px"}}>
+                            {!fileName && <div >
+                            <div className="vector" /* style={{float:"right", marginTop:"-12px"}} */>
                                 <div className="paperclip-1" >
                                     <div className="paperclip-2">
                                         <div className="paperclip-3" >
@@ -350,7 +350,7 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
 
                         {fileName && <label htmlFor="LabelTag" onClick={e => { updateFields({ PUB_Avtal: {} }); setFileName(!fileName) }}
                             className="labelUploadFileRight">Ta bort fil
-                            <div className="gg-trash labelUploadFileRight" id="LabelTag" style={{ marginLeft: "-15px", marginTop: "-13px" }}></div>
+                            <div className="gg-trash" id="LabelTag" ></div>
                         </label>}
                     </div>
                     
@@ -411,11 +411,6 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                     </div>
                     <br />
 
-
-
-
-
-
                     <div className="headingb3">Fakturareferens / beställar-id</div>
                     <div>
                         <input className={!i.Bestallare_Fak_ReferensControl ? "error" : "textBox"} onKeyDown={handleKeyDown} 
@@ -423,9 +418,6 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                             onChange={e => updateFields({ Bestallare_Fak_Referens: e.target.value })} />
                         {!i.Bestallare_Fak_ReferensControl && <p className="paragraphRed">*Ange Fakturareferens / beställar-id</p>}
                     </div>
-
-
-
 
                 </div>
             {/* </div> */}
