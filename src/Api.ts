@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Console } from "console";
 
 export const Api = function () {
 }
@@ -50,8 +51,9 @@ export function Post(fd: any) {
     data.append('Lakemedelstudier', fd.Lakemedelstudier);
     data.append('Samarbete_Med_Industrin', fd.Samarbete_Med_Industrin);
     data.append('Avtal_Industri', fd.Avtal_Industri);
-
-    //data.append('Arra', fd.Arra);
+    data.append('Sokanden', 'Forskare');
+    let json = JSON.stringify(fd.Arra);
+    console.log("JSON", json);
     for (let i = 0; i < fd.Arra.length; i++) {
         data.append('Array', JSON.stringify(fd.Arra[i]));
     }

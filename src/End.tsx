@@ -13,7 +13,7 @@ return(
     <br/>
     <div className="headingb3">Ärendet kommer att behandlas</div>
 
-<div style={{width:"592px", height:"120px"}}>Ärendet kommer att behandlas av Västra Götalandregionenss datauttagsgrupp som sammanträder regelbundet. 
+<div className="headinga16">Ärendet kommer att behandlas av Västra Götalandregionenss datauttagsgrupp som sammanträder regelbundet. 
 Efter godkännande kommer du att kontaktas av ansvarig statistiker i anslutning till bearbetning och leverans.
 Vid behov av komplettering av din ansökan eller vid avslag kommer du att kontaktas av en representant för datauttagsgruppen.</div>
 </div>

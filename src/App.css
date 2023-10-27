@@ -8,8 +8,8 @@ html{
 .App {
   /* margin-left: 30%; */
   /* margin-right: 30%; */
-  
-  background-color: rgb(243, 239, 239);
+  //background-color: blueviolet;
+  //background-color: rgb(243, 239, 239);
   /* width: 792px; */
   /* //padding: 5% 10% 5% 10%; */
   display: flex;
@@ -108,6 +108,16 @@ html{
   height: auto;
   font-family: Helvetica;
 }
+
+.headingb3{
+  font-size: 16px;
+  font-weight: 700;
+  position:relative;
+  margin-left: 0px;
+  margin-top: 37px;
+  height: auto;
+  font-family: Helvetica;
+}
 .textBoxCity{
   box-sizing: border-box;
   font-size: 16px;
@@ -119,7 +129,7 @@ html{
   padding-left: 5px;
   border-radius: 4px;
   width: 276px;
-  
+  margin-bottom: 17px;
   font-family: Helvetica;
 }
 
@@ -143,7 +153,7 @@ html{
   padding-left: 5px;
   border-radius: 4px;
   width: 276px;
-  
+  margin-bottom: 17px;
   font-family: Helvetica;
 }
 .headingb3City{
@@ -151,8 +161,9 @@ html{
   font-weight: 700;
   position:relative;
   margin-left: 40px;
-  margin-top: 40px;
+  margin-top: 37px;
   font-family: Helvetica;
+  
 }
 
 .headingb3Zip{
@@ -160,8 +171,9 @@ html{
   font-weight: 700;
   position:relative;
   margin-left: 0px;
-  margin-top: 40px;
+  margin-top: 37px;
   font-family: Helvetica;
+  
 }
 
 .info{
@@ -175,14 +187,14 @@ html{
   padding: 16px;
   font-size: 16px;
   font-weight: 400;
-  margin-top: 16px;
+  margin-top: 8px;
   font-family: Helvetica;
   display: flex;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 select{
   max-width: 371px;
@@ -263,6 +275,7 @@ select{
   margin-left: 1px;
   margin-top: 8px;
   font-family: Helvetica;
+  border-radius: 4px;
 }
 
 #paragraph{
@@ -276,8 +289,7 @@ select{
   width: 245px;
   height: 44px;
   border-radius: 4px;
-  margin-left: 0px;
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 16px;
   font-family: Helvetica;
 }
@@ -323,6 +335,7 @@ input[type="date"]{
   width:100%;
   border-radius: 4px;
   margin-top: 8px;
+  margin-bottom: 0px;
 }
 
 #inputTag, #inputTag2, #inputTag3, #inputTag4, #inputTag5, #inputTag6, #inputTag7, 
@@ -449,6 +462,17 @@ input{
   height:auto; 
   margin-top: 8px;
   margin-left: 0;
+  margin-bottom: 37px;
+  overflow-wrap: break-word;
+}
+
+.headinga16a{
+  width:592px;
+  width: 100%; 
+  
+  margin-top: 8px;
+  margin-left:-280px;
+  margin-bottom: 37px;
 }
 
 .headingb16{
@@ -487,6 +511,13 @@ input{
 
 .headingc16{
   margin-top: -10px;
+  margin-left: 0;
+  background-color: white;
+            
+}
+
+.headingd16{
+  margin-top: 8px;
   margin-left: 0;
   background-color: white;
             
@@ -665,20 +696,23 @@ align-items: center;
   
     max-width: 592px;
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: rgb(225, 242, 247);
     /* //padding: 24px; */
     margin-left: 0px;
-    max-height: 139px;
+    
     margin-top: 20px;
     font-family: Helvetica;
+    padding:24px;
+    box-sizing: border-box;
 }
 
 .datacollectionheading3{
   color: black;
   margin-left: 10px;
   margin-top: 0;
-  width: 484px;
+  max-width: 484px;
+  width: 100%;
   font-size: 18px;
   font-weight: 700;
   font-family: Helvetica;
@@ -727,7 +761,7 @@ align-items: center;
 .buttonAndra{
   float:right;
   margin-top: -80px;
-  position:absolute;
+  position:relative;
 }
 
 .gg-trash {
@@ -889,10 +923,14 @@ input:checked + .slider:before {
 }
 
 .collection-container{
-  width: 590px;
+  max-width: 590px;
+  width: 100%;
   background-color: white;
-  padding: 24px 0px 24px 24px; 
-  border: rgb(225, 242, 247)  solid 2px; 
+  padding: 24px 18px 24px 24px; 
+  border: rgb(225, 242, 247)  solid 2px;
+  
+  margin-left: -23px;
+  margin-top: 24px;
 }
 
 .datakalla, .urval, .variabler, .filformat, .leverans{
@@ -917,10 +955,145 @@ padding-bottom: 16px;
 
 }
 
+.dateFrom{
+margin-left: 0;
+}
+
+.dateTo{
+margin-left: 40px;
+}
+
+.selectAgeFrom{
+  margin-left: 0;
+  width: 210px;
+  margin-top: 8px;
+}
+
+.selectAgeTo{
+  margin-left: 41px;
+  width:210px;
+  margin-top: 8px;
+}
+
+.headingb3Date{
+  margin-left: 38px;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  font-family: Helvetica;
+}
+
+.headingb3AgeTo{
+  margin-left: 41px;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  font-family: Helvetica;
+}
+
 
 @media (max-width: 776px ){
   .progressbar{
   display: none;
+  }
+
+.groupPost{
+  display: block;
+}
+
+  .textBoxCity{
+    font-size: 16px;
+    font-weight: 700;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 8px; 
+    width: 275px;
+    font-family: Helvetica;
+    margin-bottom: 17px;
+  }
+  .textBoxZip{
+    font-size: 16px;
+    font-weight: 700;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 8px;
+    width: 275px;
+    font-family: Helvetica;
+    margin-bottom: 17px;
+  }
+
+  .headingb3City{
+    font-size: 16px;
+    font-weight: 700;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 44px;
+    font-family: Helvetica;
+    
+  }
+  
+  .headingb3Zip{
+    font-size: 16px;
+    font-weight: 700;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 40px;
+    font-family: Helvetica;
+    
+  }
+
+  .paragraphRed2{
+    color:#8C1A18;
+    margin-left: 40px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    font-family: Helvetica;
+  }
+
+  .dateFrom{
+    margin-bottom: 37px;
+  }
+  
+    .dateTo{
+      margin-left: 0;
+      margin-top: 57px;
+      }
+  
+      .selectAgeFrom{
+        margin-left: 0;
+        margin-top: 8px;
+        margin-bottom: 37px;
+      }
+  
+      .selectAgeTo{
+        margin-left: 0;
+        margin-top: 8px;
+      }
+
+      .headingb3Date{
+        margin-left: 0;
+        font-weight: 700;
+        font-size: 16px;
+        color: black;
+        font-family: Helvetica;
+      }
+
+      .headingb3AgeTo{
+        margin-left: 0;
+        font-weight: 700;
+        font-size: 16px;
+        color: black;
+        font-family: Helvetica;
+      }
+}
+
+@media (max-width: 670px) {
+  .buttonAndra{
+    float:right;
+    margin-top: -35px;
+    position:relative;
   }
 }
 
@@ -929,33 +1102,41 @@ padding-bottom: 16px;
   
   .App {
     margin-left: 0px;
-    background-color: rgb(243, 239, 239);;
-    width: 450px;
+    
+    background-color: rgb(243, 239, 239);
+    width: 610px;
     height: 300px;
+  }
+
+  .buttonAndra{
+    float:right;
+    margin-top: -75px;
+    position:relative;
   }
 
   .headdiv{
     margin-left: 0px;
     padding:24px 24px 24px 24px;
-    width: 603px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  .Form2{
+  /* .Form2{
     background-color: white;
     width: 550px;
     height:max-content;
     margin-left: 0px;
     margin-top: 20px;
-  }
+  } */
 
   .datacollection{
-  
+  max-width: 592px;
     width: 100%;
-    height: 500px;
+    height: 130px;
     background-color: rgb(225, 242, 247);
     /* //padding: 24px; */
     margin-left: 0px;
-    max-height: 139px;
+    //max-height: 139px;
     margin-top: 20px;
     font-family: Helvetica;
 }
@@ -988,6 +1169,7 @@ padding-bottom: 16px;
     margin-top: 8px; 
     width: 275px;
     font-family: Helvetica;
+    margin-bottom: 17px;
   }
   .textBoxZip{
     font-size: 16px;
@@ -997,6 +1179,7 @@ padding-bottom: 16px;
     margin-top: 8px;
     width: 275px;
     font-family: Helvetica;
+    margin-bottom: 17px;
   }
 
   .headingb3City{
@@ -1004,8 +1187,9 @@ padding-bottom: 16px;
     font-weight: 700;
     position:relative;
     margin-left: 0px;
-    margin-top: 44px;
+    margin-top: 37px;
     font-family: Helvetica;
+    
   }
   
   .headingb3Zip{
@@ -1013,8 +1197,20 @@ padding-bottom: 16px;
     font-weight: 700;
     position:relative;
     margin-left: 0px;
-    margin-top: 40px;
+    margin-top: 37px;
     font-family: Helvetica;
+    
+  }
+
+  .headingb3{
+    font-size: 16px;
+    font-weight: 700;
+    position:relative;
+    margin-left: 0px;
+    margin-top: 37px;
+    height: auto;
+    font-family: Helvetica;
+    //width: 100%;
   }
 
   .textArea{
@@ -1031,7 +1227,7 @@ padding-bottom: 16px;
     font-weight: 400;
     position:relative;
     margin-left: 0px;
-    margin-top: 0px;
+    margin-top: 8px;
     width: 100%;
     height: 44px;
     padding-left: 5px;
@@ -1074,6 +1270,16 @@ padding-bottom: 16px;
     
   }
 
+  .paragraphRed2{
+    color:#8C1A18;
+    margin-left: 0px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    font-family: Helvetica;
+  }
+
   .backgroundFileNoFile{
     background-color: #F4F4F4;
     height: 44px;
@@ -1082,16 +1288,112 @@ padding-bottom: 16px;
     border-radius: 4px;
     margin-top: 8px;
   }
-  
-  .headdiv{
-    width: 500px;
-    
-  }
 
   .groupPost{
     display: block;
     margin-left: 0;
+    margin-top: 41px;
   }
 
+.dateFrom{
+  margin-bottom: 37px;
+}
+
+  .dateTo{
+    margin-left: 0;
+    margin-top: 57px;
+    }
+
+    .selectAgeFrom{
+      margin-left: 0;
+      margin-top: 8px;
+      margin-bottom: 37px;
+    }
+
+    .selectAgeTo{
+      margin-left: 0;
+      margin-top: 8px;
+    }
+
+    .headingb3Date{
+      margin-left: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: black;
+      font-family: Helvetica;
+    }
+
+    .headingb3AgeTo{
+      margin-left: 0;
+      font-weight: 700;
+      font-size: 16px;
+      color: black;
+      font-family: Helvetica;
+    }
+
+    .collection-container{
+      height: auto;
+      width: 109%;
+      background-color: white;
+      padding: 24px 0px 24px 24px; 
+      border: rgb(225, 242, 247)  solid 2px;
+      box-sizing: border-box;
+      margin-left: -23px;
+      margin-top: 24px;
+    }
+
+    .datacollection{
+  
+      
+      width: 100%;
+      height: auto;
+      background-color: rgb(225, 242, 247);
+      /* //padding: 24px; */
+      margin-left: 0px;
+      
+      margin-top: 20px;
+      font-family: Helvetica;
+      padding:24px;
+      box-sizing: border-box;
+  }
+
+  .primaryButton{
+    border-color: rgb(0, 98, 152);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 98, 152);
+    border-radius: 4px;
+    height: 50px;
+    border-width: 1px;
+    margin-top: 32px;
+    margin-left: 120px;
+    font-size: 14px;
+    font-family: Helvetica;
+    width: 144px;
+  }
+
+  .secondaryButton{
+    border-color: rgb(0, 98, 152);
+    background-color: transparent;
+    color: rgb(0, 98, 152);
+    border-radius: 4px;
+    height: 50px;
+    border-width: 1px;
+    margin-top: 32px;
+    font-size: 14px;
+    font-family: Helvetica;
+    width: 144px;
+  }
+
+  .headinga16{
+    max-width:500px;
+    width: 100%; 
+    height:auto; 
+    margin-top: 8px;
+    margin-left: 0;
+    margin-bottom: 37px;
+    overflow-wrap: break-word;
+  }
+
+  
   
 }

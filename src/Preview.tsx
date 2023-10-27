@@ -3,6 +3,7 @@ import React from "react";
 //import { Main } from "./Main.tsx";
 //import { Roll } from "./Roll.tsx";
 //import { AboutByer } from "./AboutByer.tsx";
+import { AddData1 } from "./AddData.tsx";
 
 export function Preview(data, isValid1, Qupdate) {
 
@@ -116,38 +117,10 @@ export function Preview(data, isValid1, Qupdate) {
                     {!data.DataCollectArrayControl && <><div className="errorBackground"><p className="paragraphRed"
                         style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Obligatoriska uppgifter saknas i steg 3</p></div><br /></>}
                     {data.Arra.map((maps, index) =>
-                        <div style={{height:"500px"}}>
-                            <div className="datacollection" >
-                                <div className="datacollectionheading3">{index + 1}. Datauttag: {maps.Goverment}</div>
-                                <div className="datacollectionheading4">Skapat {date.toDateString()}</div>
-                                {/* <div className="datacollectionheading5" onClick={e => setIsShowing(!isShowing)} typeof="button">Visa mer innehåll</div> */}
-
-                                <div>Datakälla:{maps.Register}</div>
-                                <div>Från datum: {maps.FromDate}</div>
-                                <div>Till datum: {maps.ToDate}</div>
-                                <div>Datumintervallet avser: {maps.DateInterval}</div>
-                                <div>Kön: {maps.Gender}</div>
-                                <div>Ålder från: {maps.AgeFrom}</div>
-                                <div>Ålder till: {maps.AgeTo}</div>
-                                <div>Åldersintervallet avser: {maps.AgeInterval}</div>
-                                <div>Kompletterande beskrivning av urval: {maps.Additional}</div>
-                                <div>Beskrivning av variabler: {maps.DescriptionOfVariables}</div>
-                                <div>Variabellista filformat{maps.V.name}</div>
-                                <div>Filformat som önskas vid leverans: {maps.FileFormat}</div>
-                                <div>Vem ska aktuell data levereras till: {maps.DataDelivered}</div>
-                                <div>Namn: {maps.Name}</div>
-                                <div>Organisation: {maps.Organization}</div>
-                                <div>Epost: {maps.Mail}</div>
-                                <div>Telefon: {maps.Phone}</div>
-                                <div>Ska data från aktuellt register samköras med inkommande fil från beställaren? {maps.SyncRegistersWithFile}</div>
-                                <div>Ska data från aktuellt register samköras med andra datakällor? {maps.SyncRegisterFromOtherSources}</div>
-                                <div>Angivna datakälla: {maps.NameDatasources}</div>
-                                <div>Beskrivning av den tänkta processen kring samkörning: {maps.ProcessOfSync}</div>
-                                <div>Vilka variabler ska samkörningen göras på? {maps.WhichVariables}</div>
-                            </div>
-
-
-                        </div>
+                    <>
+                    <AddData1 key={index} maps={maps} i={index} visible={false}/>
+                    </>
+                        
                     )}
 
 

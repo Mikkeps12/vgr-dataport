@@ -159,7 +159,7 @@ type FormData = {
   Samarbete_Med_Industrin: string,
   Avtal_Industri: File,
   Variabellista: File[],
-  Arra: Array[]
+  Arra: Array
 }
 
 const INITIAL_DATA: FormData = {
@@ -320,8 +320,8 @@ export function Main() {
 
 
 
-  function onSubmit1(e) {
-    e.preventDefault();
+  function onSubmit1() {
+    //e.preventDefault();
     if (currentStepIndex === 0) {
       next();
     }
@@ -487,7 +487,12 @@ if(currentStepIndex === 3){
       isValid1.Bestallare_PostnummerControl,
       isValid1.Bestallare_PostortControl,
       isValid1.Bestallare_Fak_ReferensControl,
-isValid1.DataCollectArrayControl
+      isValid1.DataCollectArrayControl,
+      isValid1.DiarienummerControl,
+      isValid1.ProjekttitelControl,
+      isValid1.ProjektbeskrivningControl,
+      isValid1.LakemedelstudierControl,
+      isValid1.Samarbete_Med_IndustrinControl,
       ].every((value) => value === true);
       console.log(allTrue);
       if (!allTrue) {
@@ -704,7 +709,7 @@ isValid1.DataCollectArrayControl
       ].every((value) => value === true);
       console.log(allTrue);
       if (!allTrue) {
-        setEnableButton(false);
+        setEnableButton(true);
       }
       else {
         setEnableButton(true);
@@ -777,8 +782,8 @@ isValid1.DataCollectArrayControl
          {isLaststep ? "Done": "Next"}
          </button> */}
 
-        {currentStepIndex === 4 && enableButton === false ? <button className="primaryButton" onClick={(e) => { e.preventDefault() }}
-          style={{ backgroundColor: "gray" }}  >{page(currentStepIndex)}</button> : <button className='primaryButton' onClick={onSubmit1}>
+        {currentStepIndex === 4 && enableButton === false ? <button type="button" className="primaryButton" onClick={(e) => { e.preventDefault() }}
+          style={{ backgroundColor: "gray" }}  >{page(currentStepIndex)}</button> : <button type="button" className='primaryButton' onClick={onSubmit1}>
 
           {page(currentStepIndex)}
         </button>}

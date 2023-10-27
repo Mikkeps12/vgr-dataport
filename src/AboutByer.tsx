@@ -226,7 +226,7 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                     <div className="borderline"></div>
 
 
-                    <div className="headingb2">Behörig företrädare för forskningshuvudman</div>
+                    <div className="heading2">Behörig företrädare för forskningshuvudman</div>
                     <div className="headinga16">T.ex. prefekt, verksamhetschef, klinikchef, chef eller motsvarande</div>
                     <div className="headingb3">För- och efternamn</div>
                     <input onKeyDown={handleKeyDown} className={!i.Bestallare_NamnControl ? "error" : "textBox"} 
@@ -281,7 +281,7 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
 
                     <br />
                     <div className="borderline" style={{ marginTop: "0px" }}></div>
-                    <div className='headingb2'>Huvudansvarig forskare </div>
+                    <div className='heading2'>Huvudansvarig forskare </div>
 
 
                     <div className="info" >Observera att huvudansvarig
@@ -361,9 +361,9 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                     {/* </div> */}
 
 
-                    <br />
+                    
                     <div className="borderline" style={{ marginTop: "0px" }}></div>
-                    <div className='headingb2' >Faktureringsadress</div>
+                    <div className='heading2' >Faktureringsadress</div>
                     <br />
                     <div className="headingb3" style={{ marginTop: "0px" }}>Organisationsnummer</div>
                     <input className={!i.Bestallare_Fak_OrgControl ? "error" : "textBox"} onKeyDown={handleKeyDown} 
@@ -391,7 +391,7 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                                 onChange={e => updateFields({ Bestallare_Postnummer: e.target.value })}
                             />
                             <br />
-                            {!i.Bestallare_PostnummerControl && <span className="paragraphRed">*Ange Postnummer</span>}
+                            {!i.Bestallare_PostnummerControl && <p className="paragraphRed">*Ange Postnummer</p>}
                         </div>
 
                         <div>
@@ -405,11 +405,11 @@ export function AboutByer({ Forskningshuvudman, Bestallare_Namn, Bestallare_Tite
                             />
 
                             <br />
-                            {!i.Bestallare_PostortControl && <span className="paragraphRed2" >*Ange Postort</span>}
+                            {!i.Bestallare_PostortControl && <p className="paragraphRed2" >*Ange Postort</p>}
 
                         </div>
                     </div>
-                    <br />
+                    
 
                     <div className="headingb3">Fakturareferens / beställar-id</div>
                     <div>

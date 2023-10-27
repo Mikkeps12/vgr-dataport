@@ -283,9 +283,10 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                 <div className="gg-trash" id="LabelTag2" ></div>
                             </label>}
                         </div>
-                        <br /><br />
+                        <br/><br/>
+                        
                         <label className="headingb3">Bifoga beslut</label>
-                        <br />
+                        
 
                         <div className={fileName3 ? "backgroundFile" : 'backgroundFileNoFile'}>
                             <label className="labelUploadFileLeft">{fileName3 ? Beslut_Fil.name : "Ingen fil uppladdad"}</label>
@@ -320,14 +321,20 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
 
                     <div>
 
+                    
 
                         {visibleSections.map((maps, index) => (
+                            
                             <>
-                                <br /><br />
+                                    <br/><br/>
+                                    
+                                    
                                 {maps.Visible && <label className="headingb3">Bifoga kompletterande handling{index}</label>}
 
                                 {maps.Visible && <div className={maps.file ? "backgroundFile" : 'backgroundFileNoFile'}>
+                                    
                                     <label className="labelUploadFileLeft">{maps.file ? maps.name : "Ingen fil uppladdad"}</label>
+                                    
                                     {maps.Visible && !maps.file && <label htmlFor={"inputTag4"} className="labelUploadFileRight">Ladda upp fil</label>}
                                     {maps.Visible && !maps.file && <label id={"labelTag"} htmlFor={"inputTag4"} >
                                         <input id="inputTag4"
@@ -360,26 +367,27 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                                         <div className="gg-trash" id="LabelTag4" ></div>
 
                                     </label>}
-
+                                    
                                 </div>}
                             </>
                         ))}
                     </div>
                     {/* </div>} */}
+                   
 
                     {!isVisible4 && <button type="button" className="secondaryButton" onClick={e => { addSection(); e.preventDefault(); }}>+ Lägg till kompletterande handling</button>}
 
 
-                    <br /><br /><br /><br />
+                    {/* <br /><br /><br /> */}
 
 
 
 
-                    <div className="borderline" style={{ marginTop: "0px" }}></div>
+                    <div className="borderline" ></div>
 
 
 
-                    <div className='headingb2'>Ändringsansökan</div>
+                    <div className='heading2'>Ändringsansökan</div>
 
                     {!isVisible && <div className='headinga16' /* style={{ marginTop: "8px", marginLeft: "0px" }} */>
                         Om du har ändringsansökan kan du lägga till det här.</div>}
@@ -389,7 +397,7 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                     {isVisible && <input className="textBox" onKeyDown={handleKeyDown} type="text" value={Andringansokan_Diarienummer}
                         onChange={e => updateFields({ Andringansokan_Diarienummer: e.target.value })} />}
 
-                    <br />
+                    
                     {isVisible && <div className="headingb3">Bifoga ändringsansökan</div>}
 
 
@@ -420,9 +428,9 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                             <div className="gg-trash" id="LabelTag5" ></div>
                         </label>}
                     </div>}
-                    <br /><br />
+                    {/* <br /><br /> */}
 
-                    {isVisible && <label className="headingb3">Bifoga ändringsbeslut</label>}
+                    {isVisible && <div className="headingb3">Bifoga ändringsbeslut</div>}
 
                     {isVisible && <div className={fileName6 ? "backgroundFile" : 'backgroundFileNoFile'}>
                         <label className="labelUploadFileLeft">{fileName6 ? Beslut_Andringansokan.name : "Ingen fil uppladdad"}</label>
@@ -452,13 +460,13 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                         </label>}
                     </div>}
 
-                    <br /><br /><br />
+                    {/* <br /><br /><br /> */}
 
                     <div>
-                        <div className="borderline" style={{ marginTop: "0px" }}></div>
+                        <div className="borderline" ></div>
 
-                        <div className='headingb2'>Beskrivning av forskningsprojektet</div>
-                        <br />
+                        <div className='heading2'>Beskrivning av forskningsprojektet</div>
+                        {/* <br /> */}
                         <div className='headingb3'>Projektets titel (som i etikansökan)</div>
 
                         <textarea className="textArea"
@@ -467,7 +475,7 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                         {!i.ProjekttitelControl && <p className="paragraphRed">*Ange Projektets titel</p>}
 
 
-                        <br /><br />
+                        {/* <br /><br /> */}
                         <div className="headingb3">Sammanfattande projektbeskrivning</div>
 
                         <textarea className="textArea"
@@ -478,9 +486,9 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                         <div className='headinga16'>
                             Bakgrund, vetenskaplig frågeställning och målsättning och arbetsplan.
                         </div>
-                        <br /><br />
-                        <label className="headingb3">Bifoga projektbeskrivning</label>
                         <br />
+                        <label className="headingb3">Bifoga projektbeskrivning</label>
+                        {/* <br /> */}
                         <div className={fileName7 ? "backgroundFile" : 'backgroundFileNoFile'}>
                             <label className="labelUploadFileLeft">{fileName7 ? Projektbeskrivning_Fil.name : "Ingen fil uppladdad"}</label>
                             {!fileName7 && <label htmlFor={"inputTag7"} className="labelUploadFileRight">Ladda upp fil</label>}
@@ -507,7 +515,7 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                             </label>}
 
                         </div>
-                        <br /><br /><br />
+                        
 
 
 
@@ -515,13 +523,13 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                     </div>
 
 
-                    <div className="borderline" style={{ marginTop: "0px" }}></div>
+                    <div className="borderline" ></div>
 
                     <div>
 
 
 
-                        <div className='headingb2'>Gäller projektet läkemedelsstudier?</div>
+                        <div className='heading2'>Gäller projektet läkemedelsstudier?</div>
                         <br /><br />
                         {!i.LakemedelstudierControl && <><div className="errorBackground"><p className="paragraphRed"
                             style={{ marginTop: "15px", marginLeft: "15px", position: "relative" }}>Välj någon av alternativen</p></div><br /></>}
@@ -536,17 +544,17 @@ export function AboutScience({ Projekttitel, Projektbeskrivning,
                             checked={Lakemedelstudier === "Ja"} onChange={(e) => updateFields({ Lakemedelstudier: e.target.value })} />
                         <div className="r2">Ja, projektet gäller läkemedelsstudier.
                             Jag bekräftar med min ansökan om datauttag att det finns ett godkännandefrån Läkemedelsverket</div>
-                        <br /><br /><br />
+                        
 
 
 
                     </div>
-                    <div className="borderline" style={{ marginTop: "0px" }}></div>
+                    <div className="borderline" ></div>
                     <div>
 
 
 
-                        <div className='headingb2' >Genomförs projektet i samarbete med industrin?</div>
+                        <div className='heading2' >Genomförs projektet i samarbete med industrin?</div>
                         <div className="eadinga3" style={{ maxWidth: "591px", width: "100%", height: "auto", marginLeft: "0px" }}>Om forskningsprojektet genomförs i
                             samarbete med industrin behöver avtal mellan företaget och berörd huvudman bifogas
                             <br /><br />
